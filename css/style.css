@@ -37,3 +37,98 @@ footer {
     padding: 15px;
     margin-top: 30px;
 }
+
+/* ===== ANIMATIONS ===== */
+
+/* 1️⃣ Header Animation */
+header h1 {
+    animation: fadeSlideDown 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2️⃣ Ingredients slide in from left */
+.ingredients {
+    animation: slideLeft 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 3️⃣ Instructions slide in from right */
+.instructions {
+    animation: slideRight 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 4️⃣ Animate list items one by one */
+ul li, ol li {
+    opacity: 0;
+    animation: fadeInList 1s ease forwards;
+}
+
+ul li:nth-child(1),
+ol li:nth-child(1) { animation-delay: 0.2s; }
+
+ul li:nth-child(2),
+ol li:nth-child(2) { animation-delay: 0.4s; }
+
+ul li:nth-child(3),
+ol li:nth-child(3) { animation-delay: 0.6s; }
+
+ul li:nth-child(4),
+ol li:nth-child(4) { animation-delay: 0.8s; }
+
+ul li:nth-child(5),
+ol li:nth-child(5) { animation-delay: 1s; }
+
+@keyframes fadeInList {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 5️⃣ Footer fade in */
+footer {
+    animation: fadeInFooter 2s ease-in;
+}
+
+@keyframes fadeInFooter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
